@@ -1,0 +1,140 @@
+.heading-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 2rem;
+}
+  .heading-content {
+    text-align: center;
+    color: #ffffff;
+    animation: slideInFromLeft 1.2s ease-out;
+  }
+
+  .main-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlight {
+    color: #61dafb;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .main-title .highlight {
+    animation: slideInFromLeft 1s ease-out;
+    display: inline-block;
+  }
+
+  .name {
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .main-title .name {
+    animation: slideInFromLeft 1.5s ease-out;
+    display: inline-block;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    color: #61dafb;
+    margin-bottom: 1.5rem;
+    animation: slideInFromLeft 1.8s ease-out;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    animation: slideInFromLeft 2s ease-out;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Add a nice hover effect */
+  .main-title:hover .name {
+    transform: translateX(10px);
+    transition: transform 0.3s ease;
+  }
+
+  .subtitle:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s ease;
+  }
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #61dafb;
+  border: none;
+  color: #1a1a1a;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #61dafb;
+  color: #61dafb;
+}
+
+.primary-btn:hover {
+  background: #4fa8c7;
+  transform: translateY(-2px);
+}
+
+.secondary-btn:hover {
+  background: rgba(97, 218, 251, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
+
+.social-icons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}

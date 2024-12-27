@@ -1,0 +1,137 @@
+.resume-section {
+  padding: 80px 20px;
+  background: linear-gradient(45deg, #1a1a1a 0%, #2d3436 100%);
+  color: white;
+}
+.resume-content h2{
+  color: #61dafb;
+  text-align: center;
+  
+}
+
+.resume-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+  .resume-content::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #61dafb;
+    top: 120px;  /* Aligns with first education item start */
+    height: 550px;  /* Exact height to match education items */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: glowLine 2s infinite alternate;
+  }
+@keyframes glowLine {
+  from {
+    box-shadow: 0 0 5px #61dafb;
+  }
+  to {
+    box-shadow: 0 0 20px #61dafb;
+  }
+}
+
+.experience, .education {
+  margin-bottom: 40px;
+}
+.experience-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-left: 2px solid #61dafb;
+  background: #f8f9fa;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  background: rgba(45, 52, 54, 0.8);
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: scale(1.02);
+  background: rgba(45, 52, 54, 0.9);
+}
+
+.edu-left {
+  text-align: right;
+  padding-right: 3rem;
+  border-right: none;
+}
+
+.edu-right {
+  padding-left: 3rem;
+  position: relative;
+}
+
+.edu-right::before {
+  content: '•';
+  position: absolute;
+  left: -1.0rem;
+  color: #61dafb;
+  font-size: 2rem;
+  top: 20%;
+  transform: translateY(-50%);
+}
+
+.education-item h4 {
+  color: #61dafb;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.education-item p {
+  color: #e2e2e2;
+  line-height: 1.6;
+  
+}
+
+h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+.role {
+  color: #61dafb;
+  font-weight: 500;
+}
+
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #61dafb;
+  color: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-top: 3rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #4fa3cc;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(97, 218, 251, 0.3);
+}
+
+
