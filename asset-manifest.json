@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.db018cfc.css",
-    "main.js": "/portfolio/static/js/main.20d76ece.js",
+    "main.css": "/portfolio/static/css/main.c8a05198.css",
+    "main.js": "/portfolio/static/js/main.d321773b.js",
     "static/js/453.acca0757.chunk.js": "/portfolio/static/js/453.acca0757.chunk.js",
     "static/media/Ganesh passport.jpg": "/portfolio/static/media/Ganesh passport.ba31b3f4a7cab58194d3.jpg",
     "index.html": "/portfolio/index.html",
-    "main.db018cfc.css.map": "/portfolio/static/css/main.db018cfc.css.map",
-    "main.20d76ece.js.map": "/portfolio/static/js/main.20d76ece.js.map",
+    "main.c8a05198.css.map": "/portfolio/static/css/main.c8a05198.css.map",
+    "main.d321773b.js.map": "/portfolio/static/js/main.d321773b.js.map",
     "453.acca0757.chunk.js.map": "/portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db018cfc.css",
-    "static/js/main.20d76ece.js"
+    "static/css/main.c8a05198.css",
+    "static/js/main.d321773b.js"
   ]
 }
