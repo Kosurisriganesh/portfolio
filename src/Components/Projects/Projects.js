@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: "TO-DO-LIST",
       description: "The TO-DO-LIST project is a simple and efficient task management tool built using HTML, CSS, and JavaScript. It allows users to create, organize, and track their tasks, helping them stay organized and productive.",
-      tech: ["Html & css"],
+      tech: ["Html & css & JavaScript"],
       github: "https://github.com/Kosurisriganesh/To-Do-List"
     }
     // Add more projects
