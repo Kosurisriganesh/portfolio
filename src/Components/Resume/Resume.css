@@ -19,8 +19,8 @@
     position: absolute;
     width: 4px;
     background: #61dafb;
-    top: 120px;  /* Aligns with first education item start */
-    height: 550px;  /* Exact height to match education items */
+    top: 97px;  /* Aligns with first education item start */
+    height: 600px;/* Exact height to match education items */
     left: 50%;
     transform: translateX(-50%);
     animation: glowLine 2s infinite alternate;
@@ -75,7 +75,7 @@
 .edu-right::before {
   content: '•';
   position: absolute;
-  left: -1.0rem;
+  left: -30px;
   color: #61dafb;
   font-size: 2rem;
   top: 20%;
