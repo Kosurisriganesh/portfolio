@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.db018cfc.css",
-    "main.js": "/portfolio/static/js/main.c4a6a601.js",
+    "main.js": "/portfolio/static/js/main.20d76ece.js",
     "static/js/453.acca0757.chunk.js": "/portfolio/static/js/453.acca0757.chunk.js",
     "static/media/Ganesh passport.jpg": "/portfolio/static/media/Ganesh passport.ba31b3f4a7cab58194d3.jpg",
     "index.html": "/portfolio/index.html",
     "main.db018cfc.css.map": "/portfolio/static/css/main.db018cfc.css.map",
-    "main.c4a6a601.js.map": "/portfolio/static/js/main.c4a6a601.js.map",
+    "main.20d76ece.js.map": "/portfolio/static/js/main.20d76ece.js.map",
     "453.acca0757.chunk.js.map": "/portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db018cfc.css",
-    "static/js/main.c4a6a601.js"
+    "static/js/main.20d76ece.js"
   ]
 }
