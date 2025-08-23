@@ -1,12 +1,11 @@
+/* =========================
+   Resume Section Styling
+========================= */
 .resume-section {
   padding: 80px 20px;
-  background: linear-gradient(45deg, #1a1a1a 0%, #2d3436 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
   color: white;
-}
-.resume-content h2{
-  color: #61dafb;
-  text-align: center;
-  
+  overflow: hidden;
 }
 
 .resume-content {
@@ -14,34 +13,88 @@
   margin: 0 auto;
   position: relative;
 }
-  .resume-content::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background: #61dafb;
-    top: 97px;  /* Aligns with first education item start */
-    height: 600px;/* Exact height to match education items */
-    left: 50%;
-    transform: translateX(-50%);
-    animation: glowLine 2s infinite alternate;
+
+/* Section Heading */
+.resume-content h2 {
+  color: #61dafb;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease forwards;
+  opacity: 0;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.95);
   }
-@keyframes glowLine {
-  from {
-    box-shadow: 0 0 5px #61dafb;
-  }
-  to {
-    box-shadow: 0 0 20px #61dafb;
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 
-.experience, .education {
-  margin-bottom: 40px;
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
-.experience-item {
-  margin-bottom: 30px;
-  padding: 20px;
-  border-left: 2px solid #61dafb;
-  background: #f8f9fa;
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 20px #61dafb, 0 0 40px #61dafb;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   Education Items
+========================= */
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 3rem;
 }
 
 .education-item {
@@ -49,89 +102,151 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   padding: 2rem;
-  margin: 2rem 0;
-  background: rgba(45, 52, 54, 0.8);
+  background: rgba(45, 52, 54, 0.85);
   border-radius: 15px;
   position: relative;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  opacity: 0;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.education-item:nth-child(odd) {
+  animation-name: slideInLeft;
+}
+
+.education-item:nth-child(even) {
+  animation-name: slideInRight;
 }
 
 .education-item:hover {
-  transform: scale(1.02);
-  background: rgba(45, 52, 54, 0.9);
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(45, 52, 54, 0.95);
+  animation: bounceIn 1.6s ease-in;
 }
 
+/* Left Side (Degree + Duration) */
 .edu-left {
   text-align: right;
   padding-right: 3rem;
-  border-right: none;
 }
 
+.edu-left h4 {
+  font-size: 1.3rem;
+  color: #61dafb;
+  margin-bottom: 0.5rem;
+}
+
+.edu-left p {
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+/* Right Side (Institution + Details) */
 .edu-right {
   padding-left: 3rem;
   position: relative;
+  text-align: left;
 }
 
+/* Timeline Dot */
 .edu-right::before {
-  content: '•';
+  content: "•";
   position: absolute;
-  left: -30px;
+  left: -52px;
   color: #61dafb;
   font-size: 2rem;
-  top: 20%;
-  transform: translateY(-50%);
+  top: 40px;
+  animation: pulseGlow 2s infinite;
 }
 
-.education-item h4 {
-  color: #61dafb;
-  margin-bottom: 1rem;
+/* Institution Info */
+.edu-right h4 {
+  color: #fff;
+  margin-bottom: 0.8rem;
   font-size: 1.2rem;
+  animation: fadeInDown 1.2s ease forwards;
 }
 
-.education-item p {
+.edu-right p {
   color: #e2e2e2;
+  font-size: 0.95rem;
   line-height: 1.6;
-  
 }
 
-h4 {
-  color: #333;
-  margin-bottom: 10px;
-}
-.role {
-  color: #61dafb;
-  font-weight: 500;
-}
-
-.duration {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
+/* =========================
+   Download Button
+========================= */
 .download-btn {
   display: inline-block;
   background: #61dafb;
   color: #1a1a1a;
-  padding: 1rem 2rem;
+  padding: 1rem 2.2rem;
   border-radius: 30px;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-weight: bold;
+  font-size: 1rem;
   transition: all 0.3s ease;
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards 1.5s;
 }
 
 .download-btn:hover {
   background: #4fa3cc;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(97, 218, 251, 0.3);
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(97, 218, 251, 0.6);
 }
 
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 992px) {
+  .education-item {
+    grid-template-columns: 1fr;
+    text-align: left;
+    animation-name: slideInLeft; /* all slide from left on mobile */
+  }
 
+  .edu-left {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .edu-right {
+    padding-left: 0;
+  }
+
+  .edu-right::before {
+    left: -15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .education-item {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .edu-left h4,
+  .edu-right h4 {
+    font-size: 1.1rem;
+  }
+
+  .edu-left p,
+  .edu-right p {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+}

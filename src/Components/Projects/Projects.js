@@ -4,36 +4,41 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: "CANDLES & CAPITAL",
+      description: "Candles & Capital is a stock market edutech platform that simplifies trading and investing through structured courses, video lessons, and practical insights. It empowers learners with skills in technical analysis, candlestick patterns, and modern trading strategies.",
+      tech: ["React", "CSS" ,"Node.js","MongoDB"],
+      github: "https://github.com/Kosurisriganesh/C-C"
+    },
+    {
       title: "ONLINE HOUSE BUYER AND SELLER",
-      description: "The Online House Buyer and Seller project is a web application designed to simplify the process of buying and selling houses. Built using React.js, this platform allows users to explore available houses and list their properties for sale. It provides a user-friendly interface and ensures a seamless experience for both buyers and sellers.",
-      tech: ["React & css"],
+      description: "A web application built with React.js that simplifies the process of buying and selling houses. Users can explore available houses and list their properties for sale.",
+      tech: ["React", "CSS"],
       github: "https://github.com/Kosurisriganesh/Online-House-Buyer-and-Seller"
     },
     {
       title: "MOVIE APPLICATION",
-      description: "The Movie Application is a web-based platform that allows users to explore, search, and manage a list of movies. Built using modern web development technologies, this project provides a seamless and interactive user experience for movie enthusiasts.",
-      tech: ["React & css"],
+      description: "A movie application that allows users to explore, search, and manage movies with a seamless and interactive UI.",
+      tech: ["React", "CSS"],
       github: "https://github.com/Kosurisriganesh/Movie"
     },
     {
       title: "TEXT TO SPEECH CONVERTER",
-      description: "The Text to Speech Converter is a web application that converts text input into spoken words. It leverages the power of web technologies to provide a convenient and accessible way to listen to text content. This project is built using modern web development technologies and provides a user-friendly interface for converting text to speech.",
-      tech: ["React & css"],
-      github: "https://github.com/Kosurisriganesh/Text-to-Speech",
+      description: "Converts text input into spoken words using modern web technologies. Provides a clean and user-friendly interface.",
+      tech: ["React", "CSS"],
+      github: "https://github.com/Kosurisriganesh/Text-to-Speech"
     },
     {
       title: "FOOD WEB PAGE",
-      description: "The Food Web Page project is a beautifully designed static website that highlights various delicious food items. It can be used as a template for restaurants, food blogs, or any food-related business to showcase their offerings and attract customers",
-      tech: ["Html & css"],
+      description: "A static food showcase website template built with HTML & CSS, perfect for restaurants and food blogs.",
+      tech: ["HTML", "CSS"],
       github: "https://github.com/Kosurisriganesh/Food-Web-Page"
     },
     {
       title: "TO-DO-LIST",
-      description: "The TO-DO-LIST project is a simple and efficient task management tool built using HTML, CSS, and JavaScript. It allows users to create, organize, and track their tasks, helping them stay organized and productive.",
-      tech: ["Html & css,Javascript"],
+      description: "A simple task manager using HTML, CSS, and JavaScript. Helps users organize and track tasks easily.",
+      tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Kosurisriganesh/To-Do-List"
     }
-    // Add more projects
   ];
 
   return (
@@ -50,16 +55,12 @@ const Projects = () => {
               ))}
             </div>
             <div className="project-links">
-
-              <a href={project.github}>GitHub</a>
-              
+              <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
-          
         ))}
-        <h2>Some projects are there in GitHub....</h2>
       </div>
-      
+      <h2 className="extra-note">Some more projects are available on GitHub...</h2>
     </section>
   );
 };
