@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import Logo from './Ganesh passport.jpg';
+import Logo from './Ganesh passport2.jpg';
 
 const About = () => {
   return (

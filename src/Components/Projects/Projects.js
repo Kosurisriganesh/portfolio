@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "CANDLES & CAPITAL",
       description: "Candles & Capital is a stock market edutech platform that simplifies trading and investing through structured courses, video lessons, and practical insights. It empowers learners with skills in technical analysis, candlestick patterns, and modern trading strategies.",
-      tech: ["React", "CSS" ,"Node.js","MongoDB"],
+      tech: ["React", "CSS" ,"Node.js","Express.js","MongoDB"],
       github: "https://github.com/Kosurisriganesh/C-C"
     },
     {
