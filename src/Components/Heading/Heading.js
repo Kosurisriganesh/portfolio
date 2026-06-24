@@ -23,7 +23,7 @@ const Heading = () => {
         </h1>
 
         <h2 className="subtitle">
-          Front-End Developer | React Developer | MERN Stack Developer
+          Frontend Developer | MERN Stack Developer | Cloud Developer
         </h2>
 
         <p className="description">
