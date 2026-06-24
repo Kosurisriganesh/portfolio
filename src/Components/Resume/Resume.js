@@ -57,7 +57,7 @@ const Resume = () => {
 
         <h2>Resume</h2>
         <a
-          href="https://drive.google.com/file/d/1m1JikRE0Zb9Oek5BhlpQ0ggN7DiWrE-x/view?usp=sharing"
+          href="https://drive.google.com/file/d/17D495oW1WHBs-tLB1PL6jH9UrltSO7O6/view?pli=1"
           target="_blank"
           rel="noopener noreferrer"
           className="download-btn"
